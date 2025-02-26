@@ -3,10 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Um site muito paia</title>
-  </head>
+    <title>Pagina estruturada</title>
+    <style>
 
+      body {
+        display: grid;
+        grid-template-areas:"header header" "nav main" "nav footer";
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+
+      }
+     header {
+      grid-area: header;
+      background: #cecece;
+      text-align: center;
+      }
+      nav {
+        grid-area: nav;
+        padding: 10px;
+        text-align: center;
+      }
+      nav a, header a {
+        display: block;
+        color: gray;
+        text-decoration: none;
+        padding: 5px 0;
+      }
+      main {
+        grid-area: main;
+        padding: 20px;
+      }
+      aside {
+        background: #f4f4f4;
+        padding: 10px;
+        margin: 10px 0;
+      }
+      footer {
+        grid-area: footer;
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+      audio {
+        display: block;
+        margin: 20px auto;
+      }
+
+    </style>
+  </head>
   <body>
-    <h1>oi aula</h1>
+  <header>
+    <h3>Nunca jogue os seguintes jogos</h3>
+    <p>eles vao acabar com sua vida</p>
+    <a href="https://playvalorant.com/pt-br/?gad_source=1&gclid=Cj0KCQiA8fW9BhC8ARIsACwHqYqpZExBi2xy2HCc3RNQCPRb_fv1aX0yTpq-1JD_YYP-N5Bv4YanFbgaAmYhEALw_wcB&gclsrc=aw.ds">Exemplo 1</a>
+    <a href="https://www.leagueoflegends.com/pt-br/">Exemplo 2</a>
+    <a href="https://store.steampowered.com/app/1018800/DEEEER_Simulator_Um_Jogo_de_Veado_Corriqueiro_do_Cotidiano/" >Exemplo 3</a>
+  </header>
+  <nav>
+    <a href="https://playvalorant.com/pt-br/?gad_source=1&gclid=Cj0KCQiA8fW9BhC8ARIsACwHqYqpZExBi2xy2HCc3RNQCPRb_fv1aX0yTpq-1JD_YYP-N5Bv4YanFbgaAmYhEALw_wcB&gclsrc=aw.ds">Exemplo 1</a>
+    <a href="https://www.leagueoflegends.com/pt-br/">Exemplo 2</a>
+    <a href="https://store.steampowered.com/app/1018800/DEEEER_Simulator_Um_Jogo_de_Veado_Corriqueiro_do_Cotidiano/" >Exemplo 3</a>
+  </nav>
+  <main>
+    <article>
+      <h1>Bem vindo</h1>
+      <p>Esta e uma pagina que pode acabr com sua vida</p>
+    </article>
+    <section>
+      <h2>seção de destaque</h2>
+      <img src="images.jpg" alt="valorant zuado" width="300px" height="300px">
+    </section>
+    <section class="login">
+      
+      Email address <br><input type="email" name="Email adress" id="">
+      <br> Password  <br><input type="password">
+      <br> Remember me<input type="checkbox">
+      <br><button type="submit">
+        <img src="download.jpg" alt="icone" width="100"><br>Enviar
+      </button>
+    </section>
+    <aside>
+      <h3>Conteudo adicional</h3>
+      <p>informações extras</p>
+    </aside>
+
+    <audio controls autoplay loop>
+      <source src="musica.mp3" type="audio/mpeg"
+    </audio>
+  </main>
+  <footer>
+    <p>2025 - todos os direitos reservados</p>
+  </footer>
   </body>
 </html>
